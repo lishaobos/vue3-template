@@ -9,7 +9,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "prepare": "husky install"
+    "lint-check": "run-p lint type-check"
   },
   "dependencies": {
     "pinia": "^2.0.28",
@@ -34,11 +34,5 @@
     "unplugin-auto-import": "^0.12.1",
     "vite": "^4.0.0",
     "vue-tsc": "^1.0.12"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-p type-check lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
