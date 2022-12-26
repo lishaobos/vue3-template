@@ -35,8 +35,10 @@
     "vite": "^4.0.0",
     "vue-tsc": "^1.0.12"
   },
-  "hooks": {
-    "pre-commit": "run-p type-check lint",
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-p type-check lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
