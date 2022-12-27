@@ -1,21 +1,25 @@
 import { defineConfig } from 'unocss/vite'
-import { presetAttributify, presetUno, transformerVariantGroup, transformerDirectives } from 'unocss'
+import {
+  presetAttributify,
+  presetUno,
+  transformerVariantGroup,
+  transformerDirectives,
+} from 'unocss'
 
 export default defineConfig({
   rules: [
-    [/clip-path-\[(.+)\]/, match => ({ 'clip-path': match[1].replace(/_/g, ' ') })]
+    [
+      /clip-path-\[(.+)\]/,
+      (match) => ({ 'clip-path': match[1].replace(/_/g, ' ') }),
+    ],
   ],
-  shortcuts: {
-  },
+  shortcuts: {},
   presets: [
     presetAttributify({
       prefix: 'un-',
-      prefixedOnly: true
+      prefixedOnly: true,
     }),
-    presetUno()
+    presetUno(),
   ],
-  transformers: [
-    transformerVariantGroup(),
-    transformerDirectives()
-  ]
+  transformers: [transformerVariantGroup(), transformerDirectives()],
 })
