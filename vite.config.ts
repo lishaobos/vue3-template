@@ -11,18 +11,15 @@ export default defineConfig({
   plugins: [
     AutoImport({
       dts: true,
-      imports: [
-        'vue',
-        'vue-router'
-      ],
+      imports: ['pinia', 'vue', 'vue-router'],
     }),
-    vue(), 
+    vue(),
     vueJsx(),
-    Unocss(unoConfig)
+    Unocss(unoConfig),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 })
