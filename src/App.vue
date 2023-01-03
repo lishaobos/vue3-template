@@ -14,7 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
     />
 
     <div class="text-center">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="click it!" />
 
       <nav class="w-100% text-20px text-center mt-20px">
         <RouterLink to="/"> Home </RouterLink>
